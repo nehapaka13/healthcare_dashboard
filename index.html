@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Horizontal Navigation -->
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-icon">👩‍⚕️</span>
+        <span>Tech Care</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item active">
+          <i class="fas fa-home"></i> Overview
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-user-md"></i> Patients
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-calendar-alt"></i> Schedule
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-comments"></i> Messages
+        </li>
+        <li class="nav-item">
+          <i class="fas fa-credit-card"></i> Transactions
+        </li>
+      </ul>
+      <div class="profile">
+        <img src="doc.png" alt="Dr. Profile">
+        <div>
+          <p>Dr. Jose Simmons</p>
+          <small>General Practitioner</small>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="content">
+        <section class="patients-section">
+            <h3>Patients</h3>
+            <div class="patients-list">
+              <!-- Existing Patients -->
+                <div class="patient-card">
+                    <img src="pat_f.png" alt="Patient Image">
+                    <div class="patient-info">
+                        <p class="patient-name">Emily Williams</p>
+                        <p class="patient-gender-age">18, Female</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_m.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">Ryan Johnson</p>
+                    <p class="patient-gender-age">45, Male</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_f.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">Jessica Taylor</p>
+                    <p class="patient-gender-age">29, Female</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_f.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">Samantha Johnson</p>
+                    <p class="patient-gender-age">56, Female</p>
+                    </div>
+                </div>
+                
+                <!-- Random Additional Patients -->
+                <div class="patient-card">
+                    <img src="pat_m.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">John Doe</p>
+                    <p class="patient-gender-age">32, Male</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_f.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">Anna Smith</p>
+                    <p class="patient-gender-age">26, Female</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_m.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">Michael Brown</p>
+                    <p class="patient-gender-age">41, Male</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_f.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">Linda Green</p>
+                    <p class="patient-gender-age">55, Female</p>
+                    </div>
+                </div>
+                
+                <!-- More Random Patients -->
+                <div class="patient-card">
+                    <img src="pat_m.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">David Harris</p>
+                    <p class="patient-gender-age">39, Male</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_f.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">Sarah Clark</p>
+                    <p class="patient-gender-age">28, Female</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_m.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">George Martin</p>
+                    <p class="patient-gender-age">60, Male</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_f.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">Olivia Taylor</p>
+                    <p class="patient-gender-age">47, Female</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_m.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">William Scott</p>
+                    <p class="patient-gender-age">51, Male</p>
+                    </div>
+                </div>
+                <div class="patient-card">
+                    <img src="pat_f.png" alt="Patient Image">
+                    <div class="patient-info">
+                    <p class="patient-name">Grace Lewis</p>
+                    <p class="patient-gender-age">35, Female</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+          
+       
+        <!-- Diagnosis Section -->
+        <section class="diagnosis-section">
+            <h3>Diagnosis History</h3>
+            <canvas id="diagnosisChart" width="400" height="200"></canvas>
+            <div class="health-metrics">
+            <div class="metric">
+                <h4>Respiratory Rate</h4>
+                <p>20 bpm</p>
+            </div>
+            <div class="metric">
+                <h4>Temperature</h4>
+                <p>98.6°F</p>
+            </div>
+            <div class="metric">
+                <h4>Heart Rate</h4>
+                <p>78 bpm</p>
+            </div>
+            </div>
+        </section>                    
+      
+      <!-- Profile Details Section -->
+        <section class="details-section card-vertical">
+            <div class="card">
+                <img src="jessica.png" alt="Jessica Taylor">
+                <h3>Jessica Taylor</h3>
+                <div class="card-details">
+                    <p><strong>Date of Birth:</strong> Aug 23, 1996</p>
+                    <p><strong>Gender:</strong> Female</p>
+                    <p><strong>Contact:</strong> (123) 456-7890</p>
+                    <p><strong>Insurance Provider:</strong> Sunrise Health</p>
+                </div>
+                <button class="see-more-btn">See Full Information</button>
+            </div>
+        </section>
+      
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

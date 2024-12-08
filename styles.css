@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #f5f7fb;
+  }
+  
+  /* Dashboard */
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+    border-radius: 20px; /* Smaller curve for a compact feel */
+    padding: 10px; /* Reduce padding */
+    box-sizing: border-box;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3949ab;
+    color: white;
+    padding: 0.8rem 1.5rem; /* Reduce padding */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+  
+  .logo {
+    font-size: 1.2rem; /* Reduce size */
+    font-weight: bold;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem; /* Reduce gap */
+    margin: 0;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Reduce gap */
+    padding: 6px 12px; /* Reduce padding */
+    border-radius: 6px;
+    font-size: 0.9rem; /* Reduce font size */
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .nav-item:hover,
+  .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  .nav-item i {
+    font-size: 1rem; /* Reduce icon size */
+  }
+  
+  .profile img {
+    width: 40px; /* Smaller profile picture */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Main Content */
+  .content {
+    flex: 1;
+    padding: 1rem; /* Reduce padding */
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Maintain grid structure */
+    gap: 0.5rem; /* Reduce gap between columns */
+  }
+  
+  /* Patients Section */
+  .patients-section {
+    padding: 1rem; /* Reduce padding */
+    gap: 0.5rem; /* Reduce vertical spacing */
+    width: 220px; /* Compact width */
+  }
+  
+  .patients-list {
+    max-height: 300px; /* Reduce height */
+    overflow-y: auto;
+    margin-top: 0.5rem; /* Reduce margin */
+  }
+  
+  .patient-card {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 8px; /* Reduce padding */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduce gap */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .patient-card img {
+    width: 30px; /* Smaller profile image */
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .patient-name {
+    font-size: 0.8rem; /* Reduce font size */
+  }
+  
+  .patient-gender-age {
+    font-size: 0.75rem; /* Reduce font size */
+    color: gray;
+  }
+  
+  /* Details Section (Vertical Card) */
+  .details-section {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 1rem; /* Reduce padding */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 320px; /* Reduce width */
+    height: auto;
+  }
+  
+  .details-section img {
+    width: 100px; /* Smaller image */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.8rem; /* Reduce margin */
+  }
+  
+  .details-section h3 {
+    margin: 0.3rem 0; /* Reduce margin */
+    font-size: 1.2rem; /* Reduce font size */
+    color: #3949ab;
+  }
+  
+  .details-section .card-details {
+    margin: 0.8rem 0; /* Reduce margin */
+  }
+  
+  .details-section .card-details p {
+    font-size: 0.85rem; /* Reduce font size */
+    margin: 0.2rem 0;
+    color: #333;
+  }
+  
+  .details-section .see-more-btn {
+    background: #3949ab;
+    color: white;
+    border: none;
+    border-radius: 6px; /* Smaller button */
+    padding: 8px 12px; /* Compact padding */
+    font-size: 0.9rem; /* Reduce font size */
+    cursor: pointer;
+  }
+  
+  .details-section .see-more-btn:hover {
+    background: #303f9f;
+  }
+  
+  /* Health Metrics Section */
+  .health-metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.8rem; /* Reduce margin */
+  }
+  
+  .metric {
+    text-align: center;
+    flex: 1;
+    margin: 0 5px; /* Reduce spacing */
+    padding: 0.8rem; /* Reduce padding */
+    border-radius: 8px;
+    background-color: #f8f9fc;
+  }
+  
